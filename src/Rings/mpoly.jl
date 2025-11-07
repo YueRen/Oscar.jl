@@ -314,6 +314,10 @@ end
 
 # length, iterate, eltype are inherited from AbstractVector interface
 
+function Base.keys(A::IdealGens)
+  return 1:length(A)
+end
+
 function gens(I::IdealGens)
   return collect(I)
 end
